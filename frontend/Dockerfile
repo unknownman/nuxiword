@@ -1,5 +1,5 @@
 # Use the official Node.js image as the base image
-FROM node:14-alpine
+FROM node:18-alpine
 
 # Set the working directory
 WORKDIR /app
@@ -8,13 +8,13 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN yarn
 
 # Copy the rest of the application files to the container
 COPY . .
 
 # Build the application for production
-RUN npm run build
+RUN yarn build
 
 
 # Expose port 3000 to the Docker host
