@@ -1,0 +1,14 @@
+{
+  "name": "ali-joder/my-custom-post-type",
+  "description": "A custom post type plugin",
+  "type": "wordpress-plugin",
+  "require": {
+    "php": "^7.3",
+    "composer/installers": "^2.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "My_Custom_Post_Type\\": "includes"
+    }
+  }
+}
