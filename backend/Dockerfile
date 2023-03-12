@@ -16,5 +16,5 @@ RUN curl -o /tmp/wp-super-cache.zip -SL https://downloads.wordpress.org/plugin/w
 # && echo 'define( "WP_CACHE", true );' >> /var/www/html/wordpress/wp-config-sample.php
 
 # Copy custom plugin files
-COPY my-custom-post-type /var/www/html/backend/wp-content/plugins/my-custom-post-type
+COPY my-custom-post-type /var/www/html/wp-content/plugins/my-custom-post-type
 
