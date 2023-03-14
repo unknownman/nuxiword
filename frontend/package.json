@@ -8,6 +8,11 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@unocss/nuxt": "^0.50.4",
+    "@unocss/preset-attributify": "^0.50.4",
+    "@unocss/preset-typography": "^0.50.4",
+    "@unocss/preset-uno": "^0.50.4",
+    "@unocss/preset-web-fonts": "^0.50.4",
     "nuxt": "^3.2.3"
   }
 }
