@@ -30,6 +30,14 @@ services:
     entrypoint: [ "node", ".output/server/index.mjs" ]
     volumes:
       - ./frontend/logs:/root/.npm/_logs
+      - ./frontend/composables:/app/composables
+      - ./frontend/layouts:/app/layouts
+      - ./frontend/pages:/app/pages
+      - ./frontend/public:/app/public
+      - ./frontend/types:/app/types
+      - ./frontend/app.vue:/app/app.vue
+      - ./frontend/nuxt.config.ts:/app/nuxt.config.ts
+      - ./frontend/unocss.config.ts:/app/unocss.config.ts
     depends_on:
       - wordpress
   ## NGINX

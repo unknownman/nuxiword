@@ -2,6 +2,7 @@ import {
     defineConfig,
     presetAttributify,
     presetUno,
+    presetWind,
     presetWebFonts,
     presetTypography
     // transformerDirectives,
@@ -13,14 +14,20 @@ export default defineConfig({
     safelist: [],
     presets: [
         presetUno(),
+        presetWind(),
         presetAttributify(),
         // presetForms(),
         presetTypography(),
         presetWebFonts({
             fonts: {
-                sans: 'DM Sans',
-                serif: 'DM Serif Display',
-                mono: 'DM Mono',
+                sans: 'Noto Sans Arabic',
+                serif: 'Vazirmatn',
+                baloo: 'Baloo Bhaijaan 2',
+                ibm: 'IBM Plex Sans Arabic',
+                reader: 'Readex Pro',
+                kola: 'Kola',
+                teko: 'Teko',
+                podvaka: 'Podkova'
             },
         }),
     ],

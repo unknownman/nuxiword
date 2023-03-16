@@ -10,9 +10,16 @@
   "devDependencies": {
     "@unocss/nuxt": "^0.50.4",
     "@unocss/preset-attributify": "^0.50.4",
+    "@unocss/preset-mini": "^0.50.4",
     "@unocss/preset-typography": "^0.50.4",
     "@unocss/preset-uno": "^0.50.4",
     "@unocss/preset-web-fonts": "^0.50.4",
-    "nuxt": "^3.2.3"
+    "@unocss/preset-wind": "^0.50.4",
+    "@vueuse/core": "^9.13.0",
+    "@vueuse/nuxt": "^9.13.0",
+    "nuxt": "^3.3.1"
+  },
+  "dependencies": {
+    "@unocss/reset": "^0.50.4"
   }
 }
