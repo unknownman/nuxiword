@@ -1,26 +1,63 @@
 # NuxiWord
 
-a docker that make wordpress and nuxt together
+🐳 A Docker container that runs WordPress and Nuxt.js together. Nuxiword is a Docker-based solution that combines the power of WordPress and Nuxt.js, allowing you to build and deploy fast, SEO-friendly websites with ease. With Nuxiword, you can enjoy the flexibility and convenience of WordPress while also leveraging the performance and flexibility of Nuxt.js, making it an ideal choice for modern web development.
+
+## Technologies Used
+
+- [Nuxt 3](https://nuxt.com/docs/getting-started/introduction) a free and open-source framework with an intuitive and extendable way to create type-safe, performant and production-grade full-stack web applications and websites with Vue.js.
+- [Wordpress](https://wordpress.org/) a free and open-source content management system (CMS)
+- [Docker](https://www.docker.com) a platform designed to help developers build, share, and run modern applications.
+- [Unocss](https://github.com/unocss/unocss) The instant on-demand Atomic CSS engine.
 
 ## Getting Started
 
-To get started with Nuxiword, you will need to have Docker installed on your system. Once you have Docker installed, you can use the following steps to build and run Nuxiword:
+To get started with the project, follow these steps:
 
-1. Clone the Nuxiword repository:
+### Prerequisites
 
-   `git clone https://github.com/unknownman/nuxiword.git`
+- Docker: [https://www.docker.com/](https://www.docker.com/)
+- Docker Compose: [https://docs.docker.com/compose/](https://docs.docker.com/compose/)
 
-2. Change into the project directory:
+### Clone the repository
 
-   `cd nuxiword`
+```
+git clone https://github.com/unknownman/nuxiword.git
+cd nuxiword
+```
 
-3. Run the following command to build and start the application:
+### Set up environment variables
 
-   `docker-compose up`
+Create a new file named '.env' in the project root and add the following environment variables:
 
-   This will start the Nuxiword application and its dependencies (including a PostgreSQL database).
+```
+WORDPRESS_DB_HOST=db
+WORDPRESS_DB_USER=your_wordpress_database_user
+WORDPRESS_DB_PASSWORD=your_wordpress_database_password
+WORDPRESS_DB_NAME=your_wordpress_database_name
+MYSQL_ROOT_PASSWORD=your_mysql_root_password
+APP_URL=http://localhost:8080
+```
 
-4. Open your web browser and navigate to [http://localhost:8080](http://localhost:8080) to use Nuxiword.
+### Start the development environment
+
+Run the following command to start the development environment:
+
+```
+./scripts/dev.sh
+```
+
+The development environment will be available at [http://localhost:3000](http://localhost:3000)
+You can start editing the Nuxt.js app and see the changes live in your browser.
+
+### Rebuild the frontend service
+
+If you make changes to the frontend service, you can rebuild it with the following command:
+
+```
+./scripts/rebuild-frontend.sh
+```
+
+This will rebuild the frontend service and update the running containers.
 
 ## Contributing
 

@@ -30,6 +30,7 @@ services:
     entrypoint: [ 'yarn', 'dev' ]
     ports:
       - "3000:3000"
+      - "24678:24678"
     volumes:
       - ./frontend/logs:/root/.npm/_logs
       - ./frontend:/app
