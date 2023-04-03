@@ -25,18 +25,6 @@ git clone https://github.com/unknownman/nuxiword.git
 cd nuxiword
 ```
 
-### Set up environment variables
-
-Create a new file named '.env' in the project root and add the following environment variables:
-
-```
-WORDPRESS_DB_HOST=db
-WORDPRESS_DB_USER=your_wordpress_database_user
-WORDPRESS_DB_PASSWORD=your_wordpress_database_password
-WORDPRESS_DB_NAME=your_wordpress_database_name
-MYSQL_ROOT_PASSWORD=your_mysql_root_password
-APP_URL=http://localhost:8080
-```
 
 ### Start the development environment
 
