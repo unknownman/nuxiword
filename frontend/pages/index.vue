@@ -9,7 +9,7 @@ useHead({
   ],
   titleTemplate: "Ali's Blog - %s",
 });
-const { data: blogs, refresh, error } = await useWpApi().getPosts();
+const { data:blogs, refresh, error } = await useWpApi().getPosts();
 </script>
 <template>
   <main>
@@ -18,7 +18,8 @@ const { data: blogs, refresh, error } = await useWpApi().getPosts();
       <div class="container py-10">
         <div class="grid sm:grid-cols-3 gap-10">
           <div v-for="blog in blogs">
-            {{ blog }}
+            <p class="text-gray-500 font-black text-lg">{{ blog.title.rendered }}</p>
+            <div v-html="blog.content.rendered"></div>
           </div>
         </div>
       </div>

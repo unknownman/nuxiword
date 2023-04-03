@@ -8,11 +8,11 @@ import { Post } from "~~/types/post";
 export default () => {
     const config = useRuntimeConfig();
     var WP_URL: string = "";
-    // if (process.server) {
-    //     WP_URL = "http://wordpress/backend/?rest_route=/wp/v2/"
-    // } else {
-    WP_URL = useRuntimeConfig().public.wpUrl;
-    // }
+    if (process.server) {
+        WP_URL = "http://wordpress/backend/?rest_route=/wp/v2/"
+    } else {
+        WP_URL = useRuntimeConfig().public.wpUrl;
+    }
 
     const get = async <T> (endpoint: string) => {
         return useFetch<T>(`${WP_URL}${endpoint}`);
